@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логопед-дефектолог Волгоград | Запуск и развитие речи</title>
+    <meta name="description" content="Услуги квалифицированного логопеда-дефектолога в Волгограде. Коррекция звукопроизношения, запуск речи, логопедический массаж.">
+    
+    <!-- Подключение шрифтов (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__title">ЛогопедVlg</span>
+                <span class="logo__subtitle">Кабинет развития речи</span>
+            </a>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">О мне</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Услуги и цены</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contacts" class="btn btn--header">Записаться</a>
+
+            <!-- Гамбургер-меню для мобилок -->
+            <button class="burger" id="burger-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран (Hero) -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__badge">Логопед • Дефектолог • Волгоград</span>
+                    <h1 class="hero__title">Помогу вашему ребенку говорить красиво и уверенно</h1>
+                    <p class="hero__text">Индивидуальный подход к каждому ребенку. Запуск речи, постановка звуков, подготовка к школе и логопедический массаж.</p>
+                    <div class="hero__actions">
+                        <a href="https://wa.me/79000000000" class="btn btn--primary" target="_blank">Написать в WhatsApp</a>
+                        <a href="https://t.me/username" class="btn btn--outline" target="_blank">Telegram</a>
+                    </div>
+                </div>
+                <div class="hero__image-wrapper">
+                    <!-- Заглушка под фото специалиста -->
+                    <img src="assets/images/hero-photo.jpg" alt="Логопед-дефектолог" class="hero__image" onerror="this.src='https://via.placeholder.com/450x550?text=Фото+Специалиста'">
+                </div>
+            </div>
+        </section>
+
+        <!-- О мне -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">О специалисте</h2>
+                <div class="about__grid">
+                    <div class="about__text">
+                        <h3>Здравствуйте! Меня зовут [Имя Фамилия]</h3>
+                        <p>Я дипломированный логопед-дефектолог с опытом работы более X лет. Моя цель — не просто поставить правильные звуки, но и сделать процесс обучения интересным и комфортным для ребенка.</p>
+                        <ul class="about__features">
+                            <li> Высшее профильное образование</li>
+                            <li> Регулярное повышение квалификации</li>
+                            <li> Игровые методики обучения</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги и цены -->
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section__title">Услуги и стоимость</h2>
+                <div class="services__grid">
+                    <div class="service-card">
+                        <h3 class="service-card__title">Первичная консультация и диагностика</h3>
+                        <p class="service-card__desc">Обследование речи, артикуляционного аппарата, составление индивидуального плана занятий.</p>
+                        <div class="service-card__price">1 500 ₽ <span>/ 45 мин</span></div>
+                    </div>
+                    <div class="service-card service-card--popular">
+                        <span class="service-card__badge">Популярно</span>
+                        <h3 class="service-card__title">Индивидуальное логопедическое занятие</h3>
+                        <p class="service-card__desc">Постановка и автоматизация звуков, развитие связной речи и мелкой моторики.</p>
+                        <div class="service-card__price">1 200 ₽ <span>/ 30-40 мин</span></div>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Логопедический массаж</h3>
+                        <p class="service-card__desc">Массаж мышц речевого аппарата при дизартрии и высоком тонусе.</p>
+                        <div class="service-card__price">1 400 ₽ <span>/ 30 мин</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section class="contacts section" id="contacts">
+            <div class="container">
+                <h2 class="section__title">Контакты</h2>
+                <div class="contacts__wrapper">
+                    <div class="contacts__info">
+                        <p><strong>Адрес кабинета:</strong> г. Волгоград, ул. Примерная, д. 10</p>
+                        <p><strong>Телефон:</strong> <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+                        <p><strong>Режим работы:</strong> Пн-Сб: 09:00 — 19:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2026 LogopedVlg. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="js/main.js"></script>
+</body>
+</html>
