@@ -327,6 +327,62 @@ img {
 }
 
 /* ==========================================
+   Отзывы (Горизонтальная лента)
+   ========================================== */
+.reviews__slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* скрывает полосу прокрутки в Firefox */
+}
+
+.reviews__slider::-webkit-scrollbar {
+    display: none; /* скрывает полосу прокрутки в Chrome/Safari/Edge */
+}
+
+.review-card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-card__author {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.review-card__stars {
+    color: #FFB800;
+    letter-spacing: 2px;
+}
+
+.review-card__text {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.reviews__more {
+    text-align: center;
+}
+
+/* ==========================================
    8. Адаптив для мобильных устройств
    ========================================== */
 @media (max-width: 768px) {
@@ -391,5 +447,9 @@ img {
     .hero__actions {
         justify-content: center;
         flex-direction: column;
+    }
+    /* Добавленное правило для ширины карточки отзыва на смартфонах: */
+    .review-card {
+        flex: 0 0 85%;
     }
 }
