@@ -330,16 +330,53 @@ img {
    8. Адаптив для мобильных устройств
    ========================================== */
 @media (max-width: 768px) {
+    .header {
+        position: relative; /* Чтобы выпадающее меню крепилось к шапке */
+    }
+
     .burger {
         display: flex;
+    }
+
+    /* Превращаем 3 полоски в крестик при открытии */
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
     }
 
     .btn--header {
         display: none;
     }
 
+    /* Стили выпадающего меню */
     .nav {
-        display: none; /* Развернем через JS позже */
+        display: none; /* В обычном состоянии скрыто */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
+
+    /* Показываем меню, когда JS добавляет класс active */
+    .nav.active {
+        display: block;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .hero__container {
