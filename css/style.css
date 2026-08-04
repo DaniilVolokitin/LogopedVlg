@@ -2,16 +2,15 @@
    1. Базовые сбросы и переменные
    ========================================== */
 :root {
-    --primary-color: #6C5CE7;      /* Основной мягкий фиолетовый */
-    --primary-hover: #5A4AD1;
-    --accent-color: #FF7675;       /* Акцентный коралловый */
-    --text-color: #2D3436;         /* Основной цвет текста */
-    --text-light: #636E72;        /* Второстепенный текст */
-    --bg-light: #F9FAFB;          /* Светлый фон */
-    --white: #FFFFFF;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --radius: 16px;
-    --transition: all 0.3s ease;
+    --primary-color: #2e9b9b;       /* Мягкий бирюзовый / мятный */
+    --primary-hover: #227979;       /* Темно-бирюзовый при наведении */
+    --accent-color: #ff8a65;        /* Теплый персиковый/оранжевый акцент */
+    --bg-light: #f4faf8;            /* Очень светлый мятно-кремовый фон страниц */
+    --card-bg: #ffffff;             /* Белый фон карточек */
+    --text-color: #333333;          /* Основной цвет текста */
+    --text-muted: #666666;          /* Второстепенный текст */
+    --radius: 16px;                 /* Закругление углов */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Мягкая тень */
 }
 
 * {
@@ -240,6 +239,16 @@ img {
 .about__features li {
     margin-bottom: 10px;
     font-weight: 500;
+}
+.about__education ul {
+    list-style-type: disc; /* Обычные круглые маркеры */
+    padding-left: 20px;     /* Отступ слева, чтобы точечки не прилипали к краю */
+    margin-top: 10px;
+}
+
+.about__education li {
+    margin-bottom: 8px;    /* Расстояние между пунктами */
+    line-height: 1.5;
 }
 
 /* ==========================================
