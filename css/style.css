@@ -440,17 +440,17 @@ img {
         display: none;
     }
 
-    /* Стили выпадающего меню */
+/* Стили выпадающего меню */
     .nav {
         display: none; /* В обычном состоянии скрыто */
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--white);
+        background-color: #ffffff; /* Жестко белый фон, чтобы сайт не просвечивал */
         padding: 20px 0;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-        z-index: 999;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Перекрывает все элементы */
     }
 
     /* Показываем меню, когда JS добавляет класс active */
