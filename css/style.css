@@ -214,15 +214,16 @@ img {
 }
 
 .hero__image-wrapper {
-    position: relative;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero__image {
     width: 100%;
-    object-fit: cover;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
 }
 
 /* ==========================================
