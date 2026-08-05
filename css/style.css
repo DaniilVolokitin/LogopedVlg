@@ -221,7 +221,7 @@ img {
 
 .hero__image {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     height: auto;
     object-fit: contain;
 }
