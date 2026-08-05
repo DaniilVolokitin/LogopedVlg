@@ -180,7 +180,7 @@ img {
 
 .hero__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: center;
 }
@@ -221,7 +221,7 @@ img {
 
 .hero__image {
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
     height: auto;
     object-fit: contain;
 }
