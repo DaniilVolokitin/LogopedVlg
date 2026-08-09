@@ -240,10 +240,39 @@ img {
 }
 
 /* ==========================================
-   5. О мне
+   5. О мне (About)
    ========================================== */
 .about {
     background-color: var(--white);
+}
+
+/* Сетка для ПК: фото слева, текст справа */
+.about__content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.about__image-wrapper {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.about__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.about__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .about__features {
@@ -254,14 +283,27 @@ img {
     margin-bottom: 10px;
     font-weight: 500;
 }
+
+/* Стили для списка образования и направлений */
+.about__education h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.about__education h4:first-child {
+    margin-top: 0;
+}
+
 .about__education ul {
-    list-style-type: disc; /* Обычные круглые маркеры */
-    padding-left: 20px;     /* Отступ слева, чтобы точечки не прилипали к краю */
+    list-style-type: disc;
+    padding-left: 20px;
     margin-top: 10px;
 }
 
 .about__education li {
-    margin-bottom: 8px;    /* Расстояние между пунктами */
+    margin-bottom: 8px;
     line-height: 1.5;
 }
 
@@ -491,6 +533,18 @@ img {
         justify-content: center;
         flex-direction: column;
     }
+
+    /* Адаптив блока "О специалисте" (Фото + Текст) */
+    .about__content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about__image-wrapper {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    
     /* Добавленное правило для ширины карточки отзыва на смартфонах: */
     .review-card {
         flex: 0 0 85%;
