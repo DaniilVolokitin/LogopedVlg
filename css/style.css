@@ -561,6 +561,31 @@ img {
         margin: 0 auto;
     }
 
+    /* Две карточки услуг в один ряд */
+    .services__grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Ровно 2 колонки одинаковой ширины */
+        gap: 10px !important; /* Уменьшаем отступ между карточками, чтобы они влезали */
+    }
+
+    .service-card {
+        padding: 12px 10px !important; /* Уменьшаем внутренние отступы карточки */
+    }
+
+    .service-card__title {
+        font-size: 0.95rem !important; /* Уменьшаем размер заголовка услуги */
+        margin-bottom: 8px !important;
+    }
+
+    .service-card__desc {
+        font-size: 0.8rem !important; /* Уменьшаем описание */
+        margin-bottom: 10px !important;
+    }
+
+    .service-card__price {
+        font-size: 1.1rem !important; /* Уменьшаем шрифт цены */
+    }
+    
     /* Добавленное правило для ширины карточки отзыва на смартфонах: */
     .review-card {
         flex: 0 0 85%;
