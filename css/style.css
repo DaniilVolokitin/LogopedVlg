@@ -526,12 +526,16 @@ img {
     }
 
     .hero__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hero__actions {
         justify-content: center;
         flex-direction: column;
+    }
+
+    .nav__link {
+        color: #000000 !important;
     }
 
     /* Адаптив блока "О специалисте" (Фото + Текст) */
@@ -544,7 +548,7 @@ img {
         max-width: 260px;
         margin: 0 auto;
     }
-    
+
     /* Добавленное правило для ширины карточки отзыва на смартфонах: */
     .review-card {
         flex: 0 0 85%;
