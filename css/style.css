@@ -535,10 +535,10 @@ img {
     }
 
     .hero__image-wrapper {
-        max-width: 180px; /* Поставьте нужный размер (например, 150px, 180px или 200px) */
+        max-width: 150px; /* Поставьте нужный размер (например, 150px, 180px или 200px) */
         margin: 0 auto;   /* Выравнивает по центру */
     }
-    
+
     .nav__link {
         color: #000000 !important;
     }
