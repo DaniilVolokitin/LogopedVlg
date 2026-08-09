@@ -534,9 +534,16 @@ img {
         flex-direction: column;
     }
 
+/* Настройки размера мальчика ТОЛЬКО для телефонов */
     .hero__image-wrapper {
-        max-width: 100px; /* Поставьте нужный размер (например, 150px, 180px или 200px) */
-        margin: 0 auto;   /* Выравнивает по центру */
+        max-width: 1800px !important; /* Укажите нужную ширину для телефона (например, 180px или 200px) */
+        margin: 20px auto 0 !important; /* Выравнивает по центру */
+    }
+
+    .hero__image {
+        max-width: 100% !important; /* Принудительно сжимает само изображение под 200px */
+        width: 100% !important;
+        height: auto !important;
     }
 
     .nav__link {
