@@ -495,11 +495,15 @@ img {
     }
 
     .header__boy-img {
-        height: 85px !important; /* Автоматический размер по высоте шапки */
+        height: 95px !important; /* Автоматический размер по высоте шапки */
         width: auto !important;
         display: block !important;
         border: none !important;
         background: transparent !important;
+
+        position: relative !important;  /* Позволяет смещать картинку без влияния на высоту шапки */
+        top: 10px !important;           /* Сдвигает мальчика немного вниз, чтобы он красиво выступал из шапки */
+        margin-bottom: -20px !important;/* Компенсирует увеличенную высоту, чтобы зелёная строка не растягивалась */
     }
 
     /* 3. Полностью С К Р Ы В А Е М мальчика под текстом на телефоне */
