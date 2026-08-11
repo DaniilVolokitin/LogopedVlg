@@ -133,6 +133,11 @@ img {
     justify-content: space-between;
 }
 
+/* Скрываем мальчика из шапки на компьютерах */
+.header .mobile-only {
+    display: none;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -472,14 +477,41 @@ img {
    ========================================== */
 @media (max-width: 768px) {
     .header {
-        position: relative; /* Чтобы выпадающее меню крепилось к шапке */
+        position: relative;
     }
 
+    /* 1. Выстраиваем элементы шапки строго в один ряд */
+    .header__container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    /* 2. Показываем мальчика в шапке справа от текста логотипа */
+    .header .mobile-only {
+        display: block !important;
+        margin-left: 10px !important;
+        margin-right: auto !important; /* Отталкивает кнопку бургер-меню вправо */
+    }
+
+    .header__boy-img {
+        height: 45px !important; /* Автоматический размер по высоте шапки */
+        width: auto !important;
+        display: block !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    /* 3. Полностью С К Р Ы В А Е М мальчика под текстом на телефоне */
+    .hero .hero__image-wrapper {
+        display: none !important;
+    }
+
+    /* 4. Бургер-меню и кнопка */
     .burger {
         display: flex;
     }
 
-    /* Превращаем 3 полоски в крестик при открытии */
     .burger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 6px);
     }
@@ -496,20 +528,19 @@ img {
         display: none;
     }
 
-/* Стили выпадающего меню */
+    /* Выпадающее меню */
     .nav {
-        display: none; /* В обычном состоянии скрыто */
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #ffffff; /* Жестко белый фон, чтобы сайт не просвечивал */
+        background-color: #ffffff;
         padding: 20px 0;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000; /* Перекрывает все элементы */
+        z-index: 1000;
     }
 
-    /* Показываем меню, когда JS добавляет класс active */
     .nav.active {
         display: block;
     }
@@ -520,6 +551,11 @@ img {
         gap: 20px;
     }
 
+    .nav__link {
+        color: #000000 !important;
+    }
+
+    /* Главный экран */
     .hero__container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -534,23 +570,7 @@ img {
         flex-direction: column;
     }
 
-/* Настройки размера мальчика ТОЛЬКО для телефонов */
-    .hero__image-wrapper {
-        max-width: 1800px !important; /* Укажите нужную ширину для телефона (например, 180px или 200px) */
-        margin: 20px auto 0 !important; /* Выравнивает по центру */
-    }
-
-    .hero__image {
-        max-width: 100% !important; /* Принудительно сжимает само изображение под 200px */
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .nav__link {
-        color: #000000 !important;
-    }
-
-    /* Адаптив блока "О специалисте" (Фото + Текст) */
+    /* Адаптив "О специалисте" */
     .about__content {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -561,36 +581,37 @@ img {
         margin: 0 auto;
     }
 
-    /* Две карточки услуг в один ряд */
+    /* Услуги (2 в ряд) */
     .services__grid {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Ровно 2 колонки одинаковой ширины */
-        gap: 10px !important; /* Уменьшаем отступ между карточками, чтобы они влезали */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
     }
 
     .service-card {
-        padding: 12px 10px !important; /* Уменьшаем внутренние отступы карточки */
+        padding: 12px 10px !important;
     }
 
     .service-card__title {
-        font-size: 0.95rem !important; /* Уменьшаем размер заголовка услуги */
+        font-size: 0.95rem !important;
         margin-bottom: 8px !important;
     }
 
     .service-card__desc {
-        font-size: 0.8rem !important; /* Уменьшаем описание */
+        font-size: 0.8rem !important;
         margin-bottom: 10px !important;
     }
 
     .service-card__price {
-        font-size: 1.1rem !important; /* Уменьшаем шрифт цены */
+        font-size: 1.1rem !important;
     }
-    
-    /* Добавленное правило для ширины карточки отзыва на смартфонах: */
+
+    /* Отзывы */
     .review-card {
         flex: 0 0 85%;
     }
-    /* Адаптив контактов для мобильных */
+
+    /* Контакты */
     .contacts__wrapper {
         grid-template-columns: 1fr;
         gap: 25px;
