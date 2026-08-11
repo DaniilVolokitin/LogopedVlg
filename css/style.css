@@ -495,7 +495,7 @@ img {
     }
 
     .header__boy-img {
-        height: 45px !important; /* Автоматический размер по высоте шапки */
+        height: 65px !important; /* Автоматический размер по высоте шапки */
         width: auto !important;
         display: block !important;
         border: none !important;
