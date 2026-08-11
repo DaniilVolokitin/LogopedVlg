@@ -503,7 +503,7 @@ img {
     }
 
     /* 3. Полностью С К Р Ы В А Е М мальчика под текстом на телефоне */
-    .hero .hero__image-wrapper {
+    .hero .hero__image {
         display: none !important;
     }
 
